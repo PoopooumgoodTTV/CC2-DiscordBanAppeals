@@ -1,5 +1,5 @@
-const webhookURL = "" // MANDATORY | Your Webhook URL Here
-const avatarURL = "" // OPTIONAL | The URL for the PFP of the webhook itself. Must be a link to a supported image format.
+const webhookURL = "" // MANDATORY | https://discord.com/api/webhooks/1274527854624772198/kPn7-tAiIa6hUUe-nBSKkdS-miKX0BDJ-jYVAluEA48Ll5G-cbScSfx23TjrrbZ0MD0m
+const avatarURL = "" // OPTIONAL | https://th.bing.com/th/id/OIP.wzPquKuW-Rz28rEJ6LafRgHaHa?dpr=1.3&pid=ImgDetMain
 
 // Getting the elements from the HTML page
 const username = document.getElementById('username')
@@ -10,7 +10,7 @@ const appeal = document.getElementById('appeal')
 
 function sendMessage() { // After submitting the form.
     var request = new XMLHttpRequest() // Creates a new XML Http Request
-    request.open("POST", webhookURL) // Opens a new HTTP Request to the webhook URL
+    request.open("POST", webhookURL) // https://discord.com/api/webhooks/1274527854624772198/kPn7-tAiIa6hUUe-nBSKkdS-miKX0BDJ-jYVAluEA48Ll5G-cbScSfx23TjrrbZ0MD0m
     request.setRequestHeader('Content-type', 'application/json') // Sets the request Type
 
     var embed = { // Embed to send.
@@ -30,10 +30,9 @@ function sendMessage() { // After submitting the form.
     var params = { // Parameters to send the request
         username: `Ban Appeals Webhook`, // Name of the webhook
         avatar_url: avatarURL, // PFP URL of the webhook
-        embeds: [ embed ] // Embeds to send with the webhook
+        embeds: [ embed ] // https://discord.com/api/webhooks/1274527854624772198/kPn7-tAiIa6hUUe-nBSKkdS-miKX0BDJ-jYVAluEA48Ll5G-cbScSfx23TjrrbZ0MD0m
     }
 
     request.send(JSON.stringify(params)) // Sends the request 
     alert('Ban Appeal Sent!') // Tells the user that the appeal has been sent.
-    console.log('Ban Appeal Sent!') // Logs that the appeal has been sent. (For DEVELOPMENT purposes)
-}
+    console.log('Ban Appeal Sent!') // https://discord.com/api/webhooks/1274527854624772198/kPn7-tAiIa6hUUe-nBSKkdS-miKX0BDJ-jYVAluEA48Ll5G-cbScSfx23TjrrbZ0MD0m}
